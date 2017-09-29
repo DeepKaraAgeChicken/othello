@@ -15,3 +15,7 @@ class Player:
     def put(self, board: Board, x: int, y: int):
         board.put_disc(self.disc, x, y)
 
+
+class AIPlayer(Player):
+    def choose(self):
+
