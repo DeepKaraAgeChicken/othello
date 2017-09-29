@@ -1,11 +1,12 @@
-from othello.module import player
+from module.board import Board
+from module.player import Player
 
 
 class Core:
     def __init__(self):
-        self.player1 = player(board.BLACK, True)
-        self.player2 = player(board.WHITE, False)
-        self.board = board(8, 8)
+        self.player1 = Player(Board.BLACK, True)
+        self.player2 = Player(Board.WHITE, False)
+        self.board = Board(8, 8)
 
 
     def start(self):

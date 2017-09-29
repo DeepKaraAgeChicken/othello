@@ -1,4 +1,4 @@
-from othello.module import board
+from module.board import Board
 
 
 class Player:
@@ -12,6 +12,6 @@ class Player:
         y = input()
         return [x, y]
 
-    def put(self, board: board, x: int, y: int):
+    def put(self, board: Board, x: int, y: int):
         board.put_disc(self.disc, x, y)
 
