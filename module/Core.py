@@ -1,5 +1,5 @@
-from othello import Player
-from othello import Board
+from othello.module import Player
+
 
 class Core:
     def __init__(self):

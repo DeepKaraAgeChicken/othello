@@ -1,6 +1,5 @@
-from bokeh.sphinxext.bokeh_palette_group import bokeh_palette_group
+from othello.module import Board
 
-from othello import Board
 
 class Player:
     def __init__(self, disc: int, is_attack_first):
