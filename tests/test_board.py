@@ -1,35 +1,20 @@
 import unittest
 
-from module.board import Board
+class TestBoarad(unittest.TestCase):
 
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
 
-class TestBoard(unittest.TestCase):
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
 
-    def test1(self):
-        b = Board(6, 6)
-        b.show()
-        b.put_disc(Board.WHITE, 1, 2)
-        b.show()
-        b.put_disc(Board.BLACK, 1, 1)
-        b.show()
-        b.put_disc(Board.WHITE, 2, 1)
-        b.show()
-        b.put_disc(Board.BLACK, 1, 3)
-        b.show()
-        b.put_disc(Board.WHITE, 0, 3)
-        b.show()
-        b.put_disc(Board.BLACK, 3, 1)
-        b.show()
-        b.put_disc(Board.WHITE, 4, 3)
-        b.show()
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
 
-    def test2(self):
-        self.assertEqual(1,1)
-        print('test2')
-
-    def func(self):
-        print('func')
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
