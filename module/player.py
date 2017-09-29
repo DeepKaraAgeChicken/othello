@@ -1,4 +1,5 @@
-from othello import board
+from othello.module import board
+
 
 class Player:
     def __init__(self, disc: int, is_attack_first):
