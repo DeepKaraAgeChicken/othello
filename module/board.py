@@ -115,21 +115,3 @@ class Board:
                 if self.is_puttable(disc, x, y):
                     puttable_cells.append([x, y])
         return puttable_cells
-
-
-b = Board(6, 6)
-b.show()
-b.put_disc(Board.WHITE, 1, 2)
-b.show()
-b.put_disc(Board.BLACK, 1, 1)
-b.show()
-b.put_disc(Board.WHITE, 2, 1)
-b.show()
-b.put_disc(Board.BLACK, 1, 3)
-b.show()
-b.put_disc(Board.WHITE, 0, 3)
-b.show()
-b.put_disc(Board.BLACK, 3, 1)
-b.show()
-b.put_disc(Board.WHITE, 4, 3)
-b.show()
