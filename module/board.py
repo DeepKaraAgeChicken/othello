@@ -110,8 +110,8 @@ class Board:
 
     def get_all_puttable_cell(self, disc: int):
         puttable_cells = []
-        for x in self.width:
-            for y in self.height:
+        for x in range(0, self.width):
+            for y in range(0, self.height):
                 if self.is_puttable(disc, x, y):
                     puttable_cells.append([x, y])
         return puttable_cells
