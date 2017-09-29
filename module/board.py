@@ -1,3 +1,5 @@
+import enum
+
 import numpy as np
 
 
@@ -116,6 +118,11 @@ class Board:
                     puttable_cells.append([x, y])
         return puttable_cells
 
+
+class Cell(enum.Enum):
+    BLACK = -1
+    WHITE = 1
+    EMPTY = 0
 
 b = Board(6, 6)
 b.show()
