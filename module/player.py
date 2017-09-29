@@ -18,4 +18,4 @@ class Player:
 
 class AIPlayer(Player):
     def choose(self):
-
+        pass
