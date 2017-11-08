@@ -30,6 +30,10 @@ class Board:
         is_putted = False
         for vx in range(-1, 2):
             for vy in range(-1, 2):
+                next_x = x + vx
+                next_y = y + vy
+                if not self._is_inside(next_x, next_y):
+                    continue
                 if self.board[y + vy][x + vx] == -disc:
                     # vx, vyは方向を表す。-1～1として、9方向を表現する
                     if self._turn_recursive(disc, y, x, vy, vx):
@@ -106,7 +110,7 @@ class Board:
             return True
         elif next_disc != disc:
             # 隣が相手の石なら、さらにその隣の石も見る
-            return self._turn_recursive(disc, next_x, next_y, vx, vy)
+            return self._is_puttable_recursive(disc, next_x, next_y, vx, vy)
 
     def get_all_puttable_cell(self, disc: int):
         puttable_cells = []
